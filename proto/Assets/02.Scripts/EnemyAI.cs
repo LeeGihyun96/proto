@@ -22,7 +22,7 @@ public class EnemyAI : MonoBehaviour
     private Animator animator;
 
     //공격 사정거리
-    public float attackDist = 5.0f;
+    public float attackDist = 0.4f;
     //추적 사정거리
     public float traceDist = 100.0f;
     //사망 여부를 판단할 변수

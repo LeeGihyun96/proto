@@ -9,7 +9,7 @@ using UnityEngine.AI;
 public class MoveAgent : MonoBehaviour
 {
     //추적속도
-    private readonly float traceSpeed = 0.25f;
+    private readonly float traceSpeed = 0.5f;
     //회전할때의 속도를 조절하는 계수
     private float damping = 1.0f;
 
@@ -41,6 +41,7 @@ public class MoveAgent : MonoBehaviour
             _traceTarget = value;
             //추적 상태의 회전계수
             damping = 7.0f;
+            agent.speed = traceSpeed;
             TraceTarget(_traceTarget);
         }
     }
