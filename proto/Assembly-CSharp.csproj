@@ -60,10 +60,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\02.Scripts\BulletCtrl.cs" />
     <Compile Include="Assets\02.Scripts\EnemyAI.cs" />
     <Compile Include="Assets\02.Scripts\EnemyAttack.cs" />
     <Compile Include="Assets\02.Scripts\EnemyDamage.cs" />
     <Compile Include="Assets\02.Scripts\MoveAgent.cs" />
+    <Compile Include="Assets\02.Scripts\Player.cs" />
+    <Compile Include="Assets\02.Scripts\RemoveBullet.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/proto/proto/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

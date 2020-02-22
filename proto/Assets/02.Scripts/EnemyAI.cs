@@ -40,6 +40,7 @@ public class EnemyAI : MonoBehaviour
     private readonly int hashSpeed = Animator.StringToHash("Speed");
     private readonly int hashDie = Animator.StringToHash("Die");
 
+    public float EnemyHp = 35.0f;
     void Awake()
     {
         //주인공 게임오브젝트 추출
@@ -137,8 +138,23 @@ public class EnemyAI : MonoBehaviour
                     animator.SetTrigger(hashDie);
                     //Capsule Collider 컴포넌트를 비활성화
                     GetComponent<CapsuleCollider>().enabled = false;
+                    //Destroy(this.gameObject);
                     break;
             }
+        }
+    }
+    
+    void OnDamage(float damage)
+    {
+        EnemyHp -= damage;
+        if (EnemyHp > 0)
+        {
+            Debug.Log("Enemy HP : " + EnemyHp);
+        }
+        else
+        {
+            Debug.Log("Enemy Died!");
+            state = State.DIE;
         }
     }
 }

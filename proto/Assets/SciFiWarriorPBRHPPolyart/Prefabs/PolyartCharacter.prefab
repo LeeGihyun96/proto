@@ -1707,9 +1707,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7072444061591351794}
   - component: {fileID: 7072444061582351952}
+  - component: {fileID: 1375634026673045841}
   m_Layer: 0
   m_Name: PolyartCharacter
-  m_TagString: Untagged
+  m_TagString: PLAYER
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1723,7 +1724,7 @@ Transform:
   m_GameObject: {fileID: 7072444061591711186}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 7072444061591351728}
   - {fileID: 7072444061591351740}
@@ -1754,6 +1755,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1375634026673045841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7072444061591711186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61eda4e4b6869cb4193c79be517efaba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currWeapon: 0
+  bullet: {fileID: 0}
+  cartridge: {fileID: 0}
+  firePos: {fileID: 0}
+  attackDist: 3
+  fireRate: 0.1
 --- !u!1 &7072444061591711188
 GameObject:
   m_ObjectHideFlags: 0

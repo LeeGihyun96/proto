@@ -12,15 +12,15 @@ AvatarMask:
   - m_Path: 
     m_Weight: 1
   - m_Path: Arm1
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: AssaultRifle
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Backpack1
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Body1
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: head1
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Hips
     m_Weight: 1
   - m_Path: Hips/ArmPosition_Left
@@ -136,4 +136,4 @@ AvatarMask:
   - m_Path: Hips/UpperLeg_Right/LowerLeg_Right/Foot_Right/Toe_Right/Toetip_Right
     m_Weight: 1
   - m_Path: Leg1
-    m_Weight: 0
+    m_Weight: 1
