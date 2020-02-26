@@ -20,7 +20,7 @@ public class EnemyAttack : MonoBehaviour
     //공격 간격
     private readonly float attackRate = 0.7f;
     //player를 향해 회전할 속도 계수
-    private readonly float damping = 10.0f;
+    private readonly float damping = 11.0f;
 
     //공격 여부를 판단할 변수
     public bool isAttack = false;
