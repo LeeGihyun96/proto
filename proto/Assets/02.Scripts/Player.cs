@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
     private Transform playerTr;
     private Transform enemyTr;
 
-    public float attackDist = 3.0f;
+    public float attackDist = 5.0f;
     public float attackDamage = 6.0f;
     public bool isDie = false;
 
@@ -42,12 +42,9 @@ public class Player : MonoBehaviour
     public PlayerAnim playerAnim;
     public Animation anim;
     public EnemyAI enemyAI;
-    public Animator animator;
 
     void Start()
-    {
-        //Animator 컴포넌트 추출
-        animator = GetComponent<Animator>();
+    { 
         playerTr = GetComponent<Transform>();
         var enemy = GameObject.FindGameObjectWithTag("ENEMY");
         enemyTr = enemy.GetComponent<Transform>();
@@ -62,6 +59,7 @@ public class Player : MonoBehaviour
     {
 
         float dist = Vector3.Distance(playerTr.position, enemyTr.position);
+        //Debug.Log(dist);
 
         if (dist <= attackDist)
         {
@@ -77,9 +75,9 @@ public class Player : MonoBehaviour
 
                 if (Physics.Raycast(firePos.position, enemyTr.position - playerTr.position, out hit, 10.0f))
                 {
-                    if (hit.collider.tag == "ENEMY" && !enemyAI.isDie)
+                    if (hit.collider.tag == "ENEMY")
                     {
-                        Debug.Log("Attacking");
+                        //Debug.Log("Attacking");
                         hit.collider.gameObject.SendMessage("OnDamage", attackDamage, SendMessageOptions.DontRequireReceiver);
                         anim.CrossFade(playerAnim.shoot.name, 0.3f);
                     }

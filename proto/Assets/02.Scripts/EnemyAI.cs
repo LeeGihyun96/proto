@@ -138,7 +138,7 @@ public class EnemyAI : MonoBehaviour
                     animator.SetTrigger(hashDie);
                     //Capsule Collider 컴포넌트를 비활성화
                     GetComponent<CapsuleCollider>().enabled = false;
-                    //Destroy(this.gameObject);
+                    this.gameObject.SetActive(false);
                     break;
             }
         }
