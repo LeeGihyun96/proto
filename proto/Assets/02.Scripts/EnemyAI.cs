@@ -130,6 +130,7 @@ public class EnemyAI : MonoBehaviour
                         enemyFire.isAttack = true;
                     break;
                 case State.DIE:
+                    this.gameObject.tag = "Untagged";
                     isDie = true;
                     enemyFire.isAttack = false;
                     //추적을 정지
